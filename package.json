@@ -1,0 +1,23 @@
+{
+  "name": "archivio-fermi-mail",
+  "version": "1.0.0",
+  "description": "Mail Archivio Digitale",
+  "main": "index.js",
+  "scripts": {
+    "compile:scss": "node-sass ./templates/main/scss/main.scss -o ./templates/main/css/ -w"
+  },
+  "author": "Riccardo Sangiorgio <richard.sangiorgio@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "mustache": "^3.0.1"
+  },
+  "devDependencies": {
+    "node-sass": "^4.11.0",
+    "eslint": "^4.19.1",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-promise": "^3.8.0",
+    "eslint-plugin-standard": "^3.1.0"
+  }
+}
