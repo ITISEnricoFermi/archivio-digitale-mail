@@ -1,21 +1,25 @@
 const mustache = require('mustache')
 const fs = require('fs')
 const path = require('path')
-const juice = require('juice')
 const util = require('util')
+const inliner = require('web-resource-inliner')
 
 const main = async (message) => {
-  const mail = fs.readFileSync(path.join(__dirname, 'templates', 'main', 'index.mustache'), 'utf-8')
-  const logo = path.join('templates', 'main', 'images', 'itisFermi_white.svg')
-  const css = path.join('templates', 'main', 'css', 'main.css')
+  const template = fs.readFileSync(path.join(__dirname, 'templates', 'main', 'index.mustache'), 'utf-8')
 
-  const html = mustache.render(mail, {
-    message,
-    logo,
-    css
+  const html = mustache.render(template, {
+    message
   })
-  const compile = util.promisify(juice.juiceResources)
-  return compile(html, undefined)
+
+  const render = util.promisify(inliner.html)
+
+  return render({
+    fileContent: html,
+    svgs: true,
+    images: true,
+    links: true,
+    relativeTo: path.join(__dirname, '/templates/main/')
+  })
 }
 
 module.exports = {
