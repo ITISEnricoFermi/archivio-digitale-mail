@@ -8,6 +8,8 @@
 
 ## Getting Started
 
+La funzione `mailer` restituisce la mail in formato HTML.
+
 ```js
 const mailer = require('archivio-fermi-mail')
 
