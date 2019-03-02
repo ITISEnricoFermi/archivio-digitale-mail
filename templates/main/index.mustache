@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>Archivio Digitale</title>
-  <link rel="stylesheet" type="text/css" href="/templates/main/css/main.css">
+  <link rel="stylesheet" type="text/css" href={{{path}}}"/templates/main/css/main.css">
   <!-- remote CSS -->
   <link href="https://fonts.googleapis.com/css?family=Bitter|Roboto:400,500,700" rel="stylesheet">
   <!-- remote JS -->
@@ -16,7 +16,7 @@
     <header class="header">
       <div class="logo">
         <a href="http://itisfermi.it" class="logo__content">
-          <img src="/templates/main/images/itisFermi_white.svg" class="fermi" alt="ITIS Enrico Fermi">
+          <img src={{{path}}}"/templates/main/images/itisFermi_white.svg" class="fermi" alt="ITIS Enrico Fermi">
           <div class="separator"></div>
           <p class="archivio">Archivio Digitale</p>
         </a>
@@ -25,7 +25,7 @@
     <main class="main">
       <div class="content">
         <div class="text">
-          {{ message }}
+          {{{ message }}}
         </div>
       </div>
     </main>

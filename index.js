@@ -7,7 +7,8 @@ const util = require('util')
 const main = async (message) => {
   const mail = fs.readFileSync(path.join(__dirname, 'templates', 'main', 'index.mustache'), 'utf-8')
   const html = mustache.render(mail, {
-    message
+    message,
+    path: __dirname
   })
   const compile = util.promisify(juice.juiceResources)
   return compile(html, {})
