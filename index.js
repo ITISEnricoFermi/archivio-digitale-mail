@@ -8,8 +8,16 @@ const main = async (message) => {
   const mail = fs.readFileSync(path.join(__dirname, 'templates', 'main', 'index.mustache'), 'utf-8')
   const html = mustache.render(mail, {
     message,
-    logo: path.join('templates', 'main', 'images', 'itisFermi_white.svg'),
-    css: path.join('templates', 'main', 'css', 'main.css')
+    logo: path.format({
+      root: __dirname,
+      dir: '/templates/main/images/',
+      base: 'itisFermi_white.svg'
+    }),
+    css: path.format({
+      root: __dirname,
+      dir: '/templates/main/css/',
+      base: 'main.css'
+    })
   })
   const compile = util.promisify(juice.juiceResources)
   return compile(html, undefined)
