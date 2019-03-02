@@ -1,12 +1,16 @@
 const mustache = require('mustache')
 const fs = require('fs')
 const path = require('path')
+const juice = require('juice')
+const util = require('util')
 
-const main = (message) => {
+const main = async (message) => {
   const mail = fs.readFileSync(path.join(__dirname, 'templates', 'main', 'index.mustache'), 'utf-8')
-  return mustache.render(mail, {
+  const html = mustache.render(mail, {
     message
   })
+  const compile = util.promisify(juice.juiceResources)
+  return compile(html, {})
 }
 
 module.exports = {
