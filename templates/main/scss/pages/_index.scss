@@ -75,8 +75,11 @@ body {
   }
 
   .main {
-    padding-bottom: 3rem;
     width: 100%;
+    padding: 2rem;
+    display: table;
+    justify-content: center;
+    align-self: center;
 
     .content {
       border-radius: 0.25rem;
@@ -85,16 +88,16 @@ body {
       text-align: center;
       padding: 2rem;
       width: 80%;
-      margin-top: -7.5rem;
 
       * {
         color: #677379;
         text-align: left;
         line-height: 3rem;
         font-size: auto;
+        list-style-position: inside;
       }
 
-      p {
+      p, ul {
         font-size: 1.6rem;
       }
 

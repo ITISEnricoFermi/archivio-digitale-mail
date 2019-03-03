@@ -57,22 +57,25 @@ body {
           color: #FFFFFF;
           font-family: 'Bitter'; }
   .container .main {
-    padding-bottom: 3rem;
-    width: 100%; }
+    width: 100%;
+    padding: 2rem;
+    display: table;
+    justify-content: center;
+    align-self: center; }
     .container .main .content {
       border-radius: 0.25rem;
       background-color: #FFFFFF;
       box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.1);
       text-align: center;
       padding: 2rem;
-      width: 80%;
-      margin-top: -7.5rem; }
+      width: 80%; }
       .container .main .content * {
         color: #677379;
         text-align: left;
         line-height: 3rem;
-        font-size: auto; }
-      .container .main .content p {
+        font-size: auto;
+        list-style-position: inside; }
+      .container .main .content p, .container .main .content ul {
         font-size: 1.6rem; }
   .container .footer {
     background-color: #DBDBDB; }
