@@ -1,9 +1,9 @@
 <h1 align="center">
   <img src="https://raw.githubusercontent.com/Richard1984/archivio-fermi-client/81041b2932b032ead156777a6927efe1925b52ca/static/shortcut/safari-pinned-tab.svg?sanitize=true" height="100"><br/>
-  📚 Archivio Digitale ITIS Enrico Fermi 📚
+  📚 Archivio Digitale 📚
 </h1>
 <p align="center">
-  Progetto Archivio Digitale sviluppato da Riccardo Sangiorgio per l'ITIS Enrico Fermi.
+  Progetto Archivio Digitale sviluppato per l'ITIS Enrico Fermi.
 </p>
 
 ## Getting Started
