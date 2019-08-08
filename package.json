@@ -10,7 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "mustache": "^3.0.1",
-    "web-resource-inliner": "^4.3.2"
+    "web-resource-inliner": "^4.3.3"
   },
   "devDependencies": {
     "eslint": "^6.1.0",
