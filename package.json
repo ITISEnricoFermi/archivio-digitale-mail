@@ -9,7 +9,7 @@
   "author": "Riccardo Sangiorgio <richard.sangiorgio@gmail.com>",
   "license": "ISC",
   "dependencies": {
-    "mustache": "^3.0.2",
+    "mustache": "^3.2.0",
     "web-resource-inliner": "^4.3.3"
   },
   "devDependencies": {
